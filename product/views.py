@@ -9,3 +9,7 @@ def index(request):
 
 def men_product_view(request):
     return render(request, 'product/men.html')
+
+
+def women_product_view(request):
+    return render(request, 'product/women.html')
