@@ -8,6 +8,7 @@ def index(request):
     return render(request, 'product/index.html', {"top_products" : top_products})
 
 def men_product_view(request):
+    men_products=Product.objects.filter(product_category="Men")
     return render(request, 'product/men.html')
 
 
