@@ -79,30 +79,28 @@
         </div>
     </div>
 
+
     <div class="colorlib-product">
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 offset-sm-2 text-center colorlib-heading">
-                    <h2>Best Sellers</h2>
+                <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+                    <h2>View All Products</h2>
                 </div>
             </div>
-            {% for top_product in top_products %}
-                <div class="col-md-3 col-lg-3 mb-4 text-center">
-                    <div class="product-entry border">
-                        <a href="#" class="prod-img">
-                            <img src="{{ top_product.product_image.url }}" class="img-fluid">
-                        </a>
-                        <div class="desc">
-                            <h2><a href="#">{{ top_product.product_name }}</a></h2>
-                            <span class="price">{{ top_product.product_price }}</span>
+            <div class="row row-pb-md">
+                {% for top_product in top_products %}
+                    <div class="col-md-3 col-lg-3 mb-4 text-center">
+                        <div class="product-entry border">
+                            <a href="#" class="prod-img">
+                                <img src="{{ top_product.product_image.url }}" class="img-fluid" style="width: 200px; height: 300px; object-fit: cover;">
+                            </a>
+                            <div class="desc">
+                                <h2><a href="#">{{ top_product.product_name }}</a></h2>
+                                <span class="price">{{ top_product.product_price }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p><a href="#" class="btn btn-primary btn-lg">Shop All Products</a></p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
