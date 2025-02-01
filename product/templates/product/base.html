@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>Footwear - Free Bootstrap 4 Template by Colorlib</title>
+	<title>Footwear - Free Bootstrap 4 Template by web</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -50,35 +50,8 @@
   	<body>
 		<div id="page">
 			<nav class="colorlib-nav" role="navigation">
-				<div class="top-menu">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-7 col-md-9">
-								<div id="colorlib-logo"><a href="index.html">eMart</a></div>
-							</div>
-							<div class="col-sm-5 col-md-3">
-							<form action="#" class="search-wrap">
-							<div class="form-group">
-								<input type="search" class="form-control search" placeholder="Search">
-								<button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
-							</div>
-							</form>
-						</div>
-					</div>
-						<div class="row">
-							<div class="col-sm-12 text-left menu-1">
-								<ul>
-									<li class="active"><a href="{% url 'index' %}">Home</a></li>
-									<li class="has-dropdown"><a href="{% url 'men' %}">Men</a></li>
-									<li><a href="{% url 'women' %}">Women</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% block nav %}
+				{% endblock nav %}
 				<div class="sale">
 					<div class="container">
 						<div class="row">
@@ -173,7 +146,7 @@
 						<div class="col-sm-12 text-center">
 							<p>
 								<span>
-									Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+									Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://web.com" target="_blank">web</a>
 								</span> 
 								<span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
 							</p>

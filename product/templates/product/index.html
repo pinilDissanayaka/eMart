@@ -2,49 +2,40 @@
 
 {% load static %}
 
-{% block content %}
-    <aside id="colorlib-hero">
-        <div class="flexslider">
-            <ul class="slides">
-                <li style="background-image: url('{% static 'images/img_bg_2.jpg' %}');">
-                    <div class="overlay"></div>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6 offset-sm-3 text-center slider-text">
-                                <div class="slider-text-inner">
-                                    <div class="desc">
-                                        <h1 class="head-1">Huge</h1>
-                                        <h2 class="head-2">Sale</h2>
-                                        <h2 class="head-3"><strong class="font-weight-bold">50%</strong> Off</h2>
-                                        <p class="category"><span>Big sale sandals</span></p>
-                                        <p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url('{% static 'images/img_bg_3.jpg' %}');">
-                    <div class="overlay"></div>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6 offset-sm-3 text-center slider-text">
-                                <div class="slider-text-inner">
-                                    <div class="desc">
-                                        <h1 class="head-1">New</h1>
-                                        <h2 class="head-2">Arrival</h2>
-                                        <h2 class="head-3">up to <strong class="font-weight-bold">30%</strong> off</h2>
-                                        <p class="category"><span>New stylish shoes for men</span></p>
-                                        <p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+{% block nav %}
+    <div class="top-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-md-9">
+                    <div id="colorlib-logo"><a href="{% url 'index' %}">eMart</a></div>
+                </div>
+                <div class="col-sm-5 col-md-3">
+                <form action="#" class="search-wrap">
+                <div class="form-group">
+                    <input type="search" class="form-control search" placeholder="Search">
+                    <button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
+                </div>
+                </form>
+            </div>
         </div>
-    </aside>
+            <div class="row">
+                <div class="col-sm-12 text-left menu-1">
+                    <ul>
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'men' %}">Men</a></li>
+                        <li><a href="{% url 'women' %}">Women</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock nav %}
+
+
+{% block content %}
     <div class="colorlib-intro">
         <div class="container">
             <div class="row">
@@ -68,9 +59,9 @@
 
                 <div class="col-sm-6 text-center">
                     <div class="featured">
-                        <a href="#" class="featured-img" style="background-image: url('{% static 'images/women.jpg' %}');"></a>
+                        <a href="{% url 'women' %}" class="featured-img" style="background-image: url('{% static 'images/women.jpg' %}');"></a>
                         <div class="desc">
-                            <h2><a href="#">Shop Women's Collection</a></h2>
+                            <h2><a href="{% url 'women' %}">Shop Women's Collection</a></h2>
                         </div>
                     </div>
                 </div>
