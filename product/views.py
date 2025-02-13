@@ -23,3 +23,7 @@ def women_product_view(request):
         women_products=Category.objects.none()
 
     return render(request, 'product/women.html', {"products" : women_products})
+
+
+def kids_product_view(request): 
+    return render(request, 'product/kids.html')
